@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<paths>
+    <external-path name="video" path="xzb/recvFiles/" />
+    <external-path name="download_path" path="Download/"/>
+    <!--/storage/emulated/0/Android/data/${applicationId}/files/apk/-->
+    <external-path name="privte_path" path="Android/data/"/>
+    <external-path name="publis_photo" path="Pictures/"/>
+
+</paths>

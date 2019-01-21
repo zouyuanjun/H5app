@@ -1,0 +1,16 @@
+com.ericssonlabs
+color possible_result_points
+color result_view
+color transparent
+color viewfinder_frame
+color viewfinder_laser
+color viewfinder_mask
+id auto_focus
+id decode
+id decode_failed
+id decode_succeeded
+id launch_product_query
+id quit
+id restart_preview
+id return_scan_result
+raw beep

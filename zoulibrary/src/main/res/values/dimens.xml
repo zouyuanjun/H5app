@@ -1,0 +1,58 @@
+<resources>
+
+    <!-- textSize<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< -->
+
+    <!-- textSize>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> -->
+
+
+    <!-- padding<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< -->
+
+    <!-- padding>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> -->
+
+
+    <!-- margin<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< -->
+
+    <!-- margin>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> -->
+
+
+    <!-- topbar -->
+
+    <!-- topbar -->
+
+
+    <!-- progress bar -->
+
+    <!-- progress bar -->
+
+
+    <!-- menu -->
+
+    <!-- menu -->
+
+
+    <!-- listView -->
+
+    <!-- listView -->
+
+
+    <!-- common item -->
+
+    <!-- common item -->
+
+    <!-- content item <<<<<<<<<<<<<<<<<<<<<<<<<<< -->
+    <!-- content item >>>>>>>>>>>>>>>>>>>>>>>>>>> -->
+
+
+    <!-- button -->
+
+    <!-- button -->
+
+
+    <!-- search bar <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< -->
+
+    <!-- search bar >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> -->
+
+    <dimen name="radius">3dp</dimen>
+    <dimen name="three_grid_unit">24dp</dimen>
+    <dimen name="one_and_a_half_grid_unit">1dp</dimen>
+</resources>

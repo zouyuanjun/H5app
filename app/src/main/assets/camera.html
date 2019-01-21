@@ -1,0 +1,70 @@
+<!DOCTYPE HTML>  
+<html>  
+<head>  
+    <meta charset="UTF-8">  
+    <title> 上传多张图片</title>  
+    <style type="text/css">  
+        .img-div{  
+            border: 1px solid #ddd;  
+            border-radius: 100%;  
+            float: left;  
+            line-height: 1;  
+            margin-left: 5px;  
+            overflow: hidden;  
+        }  
+  
+    </style>
+    <script src="./dsbridge.js"></script>
+</head>  
+<body>  
+  
+<script type="text/javascript">  
+    //选择图片，马上预览  
+    function xmTanUploadImg(obj) {  
+  
+        var fl=obj.files.length;
+        for(var i=0;i<fl;i++){  
+            var file=obj.files[i];  
+            var reader = new FileReader();
+            reader.onload = function (e) {  
+                console.log("成功读取...."+e.target.result);
+  
+                var imgstr='<img style="width:100px;height:100px;" src="'+e.target.result+'"/>';  
+                var oimgbox=document.getElementById("imgboxid");  
+                var ndiv=document.createElement("div");  
+  
+                ndiv.innerHTML=imgstr;  
+                ndiv.className="img-div";  
+                oimgbox.appendChild(ndiv);  
+                 
+            }
+            reader.readAsDataURL(file);
+        }  
+  
+    }
+
+    function qr(){
+dsBridge.call("qr",null)
+
+    }
+    dsBridge.register('qrresult',function(s){
+     document.getElementById("result").value=s
+ })
+</script>  
+<form id="form"  enctype="multipart/form-data">  
+        <input type="file" accept="image/jpeg" id="xdaTanFileImg"  multiple="multiple"  appname="fileAttach" onchange="xmTanUploadImg(this)"/>
+    <div class="img-box" id="imgboxid">  
+  
+    </div>  
+  
+                      <div id="xmTanDiv"></div><br/>  
+                <div id="errordiv"   style="margin-top:15px;width:100%;text-align:center;">  
+                <input id="bt" type="button" onclick="test(this)" value="提交" />   
+            </div>  
+</form>
+<button onclick="qr()">扫一扫</button>
+扫描结果:<br>
+<input id="result" type="text" appname="username">
+
+</body>
+</html>  

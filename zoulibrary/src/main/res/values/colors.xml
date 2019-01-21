@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="green">#33cc66</color>
+    <color name="red">#ee3b3b</color>
+
+    <color name="alpha_9">#99000000</color>
+    <color name="white">#ffffff</color>
+    <color name="white_alpha_6">#bbdddddd</color>
+    <color name="black">#000000</color>
+    <color name="black_slight">#666666</color>
+    <color name="blue">#009ed3</color>
+    <color name="blue_btn">#2c6ed2</color>
+    <color name="blue_sky">#62c8f9</color>
+    <color name="transparent">#00000000</color>
+    <color name="touchbg">#364b4b58</color>
+</resources>

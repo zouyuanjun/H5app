@@ -1,0 +1,112 @@
+<html>
+<head>
+    <!--从assert中加载的中文网页会出现乱码，解决办法就是给html指定编码-->
+    <meta http-equiv="content-type" content="text/html;charset=gb2312">
+    <title>
+    </title>
+    <script src="./dsbridge.js"></script>
+</head>
+<body>
+Html调用Andoid原生功能Demo <br/>
+要保存的字段:<br>
+<input id="key" type="text" appname="username">
+<br>
+值:<br>
+<input id="valu" type="text" appname="psw">
+<br>
+要取出的字段:<br>
+<input id="getkey" type="text" appname="psw">
+<br>
+获取的值:<br>
+<input id="getvalu" type="text" appname="psw">
+<br>
+<button onclick="save()">保存</button>
+<button onclick="getdata()">取出</button>
+<p id="p"></p>
+<form id="form" enctype="multipart/form-data">
+    <!--选择或者拍照-->
+    <input type="file" accept="image/jpeg" id="xdaTanFileImg" multiple="multiple" appname="fileAttach"
+           onchange="xmTanUploadImg(this)" />
+    <!--录音-->
+    <input type="file" accept="audio/amr-wb" id="xdaTanFileaudio" multiple="multiple" appname="fileAttach"
+           onchange="xmTanUploadImg(this)"/>
+    <div class="img-box" id="imgboxid">
+
+    </div>
+    <br/>
+</form>
+<button onclick="qr()">扫一扫</button>
+
+扫描结果:<br>
+<input id="result" type="text" name="username">
+<input id="phone" type="text" name="username">
+<button onclick="callphone()">打电话</button>
+<button onclick="sendmessage()">发短信</button>
+<button onclick="getsysinfo()">获取 系统版本</button>
+<input id="sysinfo" type="text" name="username">
+<script type="text/javascript">
+
+    //保存数据
+    function save() {
+        var key = document.getElementById("key").value
+        var value = document.getElementById("valu").value
+        dsBridge.call("savedata", key + "|" + value)
+    }
+    //获取储存的数据
+    function getdata() {
+        var key = document.getElementById("getkey").value
+        var data = dsBridge.call("getvalue", key)
+        document.getElementById("getvalu").value = data
+    }
+</script>
+<script type="text/javascript">
+    //选择图片，马上预览
+    function xmTanUploadImg(obj) {
+
+        var fl = obj.files.length;
+        for (var i = 0; i < fl; i++) {
+            var file = obj.files[i];
+            var reader = new FileReader();
+            reader.onload = function (e) {
+                console.log("成功读取...." + e.target.result);
+
+                var imgstr = '<img style="width:100px;height:100px;" src="' + e.target.result + '"/>';
+                var oimgbox = document.getElementById("imgboxid");
+                var ndiv = document.createElement("div");
+
+                ndiv.innerHTML = imgstr;
+                ndiv.className = "img-div";
+                oimgbox.appendChild(ndiv);
+
+            }
+            reader.readAsDataURL(file);
+        }
+
+    }
+    //扫码功能
+    function qr() {
+        dsBridge.call("qr", null)
+
+    }
+     //打电话功能
+    function callphone() {
+         var phonenum=document.getElementById("phone").value
+        dsBridge.call("callPhone", phonenum)
+    }
+     //发短信
+    function sendmessage() {
+         var phonenum=document.getElementById("phone").value
+        dsBridge.call("sendMessage", phonenum)
+    }
+     //获取系统版本信息
+    function getsysinfo() {
+         var sysversion= dsBridge.call("getSysinfo", null)
+         document.getElementById("sysinfo").value=sysversion
+    }
+    //注册接受扫码结果函数
+    dsBridge.register('qrresult', function (s) {
+        document.getElementById("result").value = s
+    })
+</script>
+</body>
+</html>

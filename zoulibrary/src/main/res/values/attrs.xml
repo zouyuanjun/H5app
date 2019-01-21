@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name = "CustomNavigatorBar">
+        <attr name="titleBarBackground" format="reference|color" />
+        <attr name="leftImage" format="reference" />
+        <attr name="leftImageVisiable" format="boolean" />
+        <attr name="leftText" format="string|reference" />
+        <attr name="leftTextVisible" format="boolean" />
+        <attr name="leftTextFontSize" format="dimension|reference" />
+        <attr name="leftTextColor" format="color|reference" />
+        <attr name="midText" format="string|reference" />
+        <attr name="midTextVisiable" format="boolean" />
+        <attr name="midTextFontSize" format="dimension|reference" />
+        <attr name="midTextFontColor" format="color|reference" />
+        <attr name="rightText" format="string|reference" />
+        <attr name="rightTextVisible" format="boolean" />
+        <attr name="rightTextFontSize" format="dimension|reference" />
+        <attr name="rightTextColor" format="color|reference" />
+        <attr name="rightImage" format="reference" />
+        <attr name="rightImageVisible" format="boolean" />
+        <attr name="midTextSizeSp" format="integer" />
+        <attr name="rightTextSizeSp" format="integer" />
+    </declare-styleable>
+
+    <!-- 背景颜色 -->
+    <attr name="appBgColor" format="color"/>
+    <!-- 边角幅度 -->
+    <attr name="appRadius" format="dimension"/>
+
+    <!--  圆角矩形TextView-->
+    <declare-styleable name="ShapeCornerBgView">
+        <attr name="appBorder" format="boolean"/>
+        <!-- 是否有边框 -->
+        <attr name="appBorderWidth" format="dimension"/>
+        <!-- 边框线条的粗细 -->
+        <attr name="appBorderColor" format="color"/>
+        <!-- 边框线条的颜色 -->
+        <attr name="appBgColor"/>
+        <!-- 背景的颜色 -->
+        <attr name="appRadius"/>
+        <!-- 圆角度数 -->
+        <attr name="appTopLeftCorner" format="boolean"/>
+        <!-- 是否有圆角，默认，真 -->
+        <attr name="appBottomLeftCorner" format="boolean"/>
+        <!-- 是否有圆角，默认，真 -->
+        <attr name="appTopRightCorner" format="boolean"/>
+        <!-- 是否有圆角，默认，真 -->
+        <attr name="appBottomRightCorner" format="boolean"/>
+        <!-- 是否有圆角，默认，真 -->
+        <attr name="appEnableFalseBgColor" format="color"/>
+        <!-- 禁用时的背景颜色 -->
+        <attr name="appEnableFalseTextColor" format="color"/>
+        <!-- 禁用时的文字颜色 -->
+    </declare-styleable>
+    <declare-styleable name="ClearWriteEditText">
+        <attr name="edBorder" format="boolean"/>
+        <!-- 是否有边框 -->
+        <attr name="edBorderWidth" format="dimension"/>
+        <!-- 边框线条的粗细 -->
+        <attr name="edBorderColor" format="color"/>
+        <!-- 边框线条的颜色 -->
+        <attr name="edBgColor"/>
+        <!-- 背景的颜色 -->
+        <attr name="edRadius"/>
+        <!-- 圆角度数 -->
+        <attr name="edTopLeftCorner" format="boolean"/>
+        <!-- 是否有圆角，默认，真 -->
+        <attr name="edBottomLeftCorner" format="boolean"/>
+        <!-- 是否有圆角，默认，真 -->
+        <attr name="edTopRightCorner" format="boolean"/>
+        <!-- 是否有圆角，默认，真 -->
+        <attr name="edBottomRightCorner" format="boolean"/>
+        <!-- 是否有圆角，默认，真 -->
+        <attr name="edEnableFalseBgColor" format="color"/>
+        <!-- 禁用时的背景颜色 -->
+        <attr name="edEnableFalseTextColor" format="color"/>
+        <!-- 禁用时的文字颜色 -->
+    </declare-styleable>
+
+    <declare-styleable name="NiceSpinner">
+        <attr name="arrowTint" format="color" />
+        <attr name="hideArrow" format="boolean" />
+        <attr name="arrowDrawable" format="reference|color"/>
+        <attr name="dropDownListPaddingBottom" format="dimension"/>
+        <attr name="backgroundSelector" format="integer"/>
+        <attr name="textTint" format="color"/>
+    </declare-styleable>
+    <declare-styleable name="BGLinearlayout">
+        <attr name="strokecolor" format="color"/>
+        <attr name="strokesize" format="dimension"/>
+        <attr name="bgradius" format="dimension"/>
+        <attr name="bgdividecolor" format="color"/>
+        <attr name="bgdividesize" format="dimension"/>
+        <attr name="bgdividepadding" format="dimension"/>
+        <attr name="bgcolor" format="color"/>
+        <attr name="bgdividePaddingLeft" format="dimension"/>
+        <attr name="bgdividePaddingRight" format="dimension"/>
+    </declare-styleable>
+
+</resources>
